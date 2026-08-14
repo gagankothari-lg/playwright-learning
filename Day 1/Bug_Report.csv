@@ -1,0 +1,82 @@
+Test Case ID,Title,Environment,Preconditions,Steps to Reproduce,Expected Result,Actual Result,Severity,Priority
+1,,"URL: https://www.saucedemo.com/ | Browser: Chrome Version 151.0.7922.109 | OS: Windows 11",Login with both valid username & password,"1. navigate to login page
+2. Enter valid Username
+3. Enter valid password
+4. Click Login",Successful Login,Successful Login but when logging in with other users Username-'locked_out_user' shows Epic sadface: Sorry this user has been locked out.,,High
+2,,"URL: https://www.saucedemo.com/ | Browser: Chrome Version 151.0.7922.109 | OS: Windows 11",Login with valid username & invalid password,"1. navigate to login page
+2. Enter valid Username
+3. Enter invalid Password
+4. Click Login",Error wrong password,Epic sadface: Username and password do not match any user in this service,,High
+3,,"URL: https://www.saucedemo.com/ | Browser: Chrome Version 151.0.7922.109 | OS: Windows 11",Login with invalid username & valid password,"1. navigate to login page
+2. Enter invalid Username
+3. Enter valid Password
+4. Click Login",Error invalid username,Epic sadface: Username and password do not match any user in this service,,High
+4,,"URL: https://www.saucedemo.com/ | Browser: Chrome Version 151.0.7922.109 | OS: Windows 11",Login with both invalid username & password,"1. navigate to login page
+2. Enter invalid Username
+3. Enter invalid Password
+4. Click Login",Error invalid username,Epic sadface: Username and password do not match any user in this service,,High
+5,,"URL: https://www.saucedemo.com/ | Browser: Chrome Version 151.0.7922.109 | OS: Windows 11",Login with both username & password fields empty,"1. navigate to login page
+2. Leave both the Username & Password field empty
+3. Click Login",Error username is required,Epic sadface: Username is required,,High
+6,,"URL: https://www.saucedemo.com/ | Browser: Chrome Version 151.0.7922.109 | OS: Windows 11",Login with only username field empty,"1. navigate to login page
+2. Leave the Username field empty
+3. Enter password
+4. Click Login",Error username is required,Epic sadface: Username is required,,High
+7,,"URL: https://www.saucedemo.com/ | Browser: Chrome Version 151.0.7922.109 | OS: Windows 11",Login with only password field empty,"1. navigate to login page
+2. Enter Username
+3. Leave the Password field empty
+4. Click Login",Error password is required,Epic sadface: Password is required,,High
+8,,"URL: https://www.saucedemo.com/ | Browser: Chrome Version 151.0.7922.109 | OS: Windows 11",Verify space in password field,"1. navigate to login page
+2. Enter a Username
+3. Enter password with a space on the start or end of the name
+4. Click Login",Shows hidden password in dots and error wrong password,Showing password in dots + Epic sadface: Username and password do not match any user in this service,,High
+9,,"URL: https://www.saucedemo.com/ | Browser: Chrome Version 151.0.7922.109 | OS: Windows 11",Verify password range limitation,"1. navigate to login page
+2. Enter Username
+3. Enter password less than 6 characters
+4. Click Login
+
+1. navigate to login page
+2. Enter Username
+3. Enter password more than 15 characters
+4. Click Login","Error Password range must be 8 -15 characters",Epic sadface: Username and password do not match any user in this service,,Mid
+10,,"URL: https://www.saucedemo.com/ | Browser: Chrome Version 151.0.7922.109 | OS: Windows 11",Verify password is hidden by default,"1. navigate to login page
+2. Enter password","Entered password must be hidden, either shows in dots/aesthetics",Showing password in dots,,High
+11,,"URL: https://www.saucedemo.com/ | Browser: Chrome Version 151.0.7922.109 | OS: Windows 11",Verify empty input field default placeholder,1. navigate to login page,"Placeholder 'Username' & 'Password' is clearly visible",Placeholders are visible,,Mid
+12,,"URL: https://www.saucedemo.com/ | Browser: Chrome Version 151.0.7922.109 | OS: Windows 11",Show/Hide password icon,1. navigate to login page,There must be an icon to show/hide password,No show/hide passowrd icon,,Mid
+13,,"URL: https://www.saucedemo.com/ | Browser: Chrome Version 151.0.7922.109 | OS: Windows 11",Verify Tab key navigation,"1. navigate to login page
+2. Enter Username and enter Tab key
+3. Enter Password and enter Tab key","Cursor should move to password field, then show/hide password icon and then to login button",Cursor moves correctly but no show/hide icon present,,Mid
+14,,"URL: https://www.saucedemo.com/ | Browser: Chrome Version 151.0.7922.109 | OS: Windows 11",Verify Enter key navigation,"1. navigate to login page
+2. Enter Username and click Enter key",Cursor should move to password field and then to login button,Cursor does not move correctly instead of moving to password field directly tries to login,,Mid
+15,,"URL: https://www.saucedemo.com/ | Browser: Chrome Version 151.0.7922.109 | OS: Windows 11",Verify Enter key Login,"1. navigate to login page
+2. Enter Username and click Enter key
+3. Enter password and click Enter key",Successful Login,Enter key login correctly but Does not navigates cursor to any field,,Mid
+16,,"URL: https://www.saucedemo.com/ | Browser: Chrome Version 151.0.7922.109 | OS: Windows 11",Verify Login button click,"1. navigate to login page
+2. Enter Username
+3. Enter password
+4. Click login",Must show either error message or must login successfully,Login button working properly,,High
+17,,"URL: https://www.saucedemo.com/ | Browser: Chrome Version 151.0.7922.109 | OS: Windows 11",Verify dismissing error message,"1. navigate to login page
+2. click Enter key
+3. click cross button on the error displayed",The error message must disappear on clicking the cross,Error message disappears,,Low
+18,,"URL: https://www.saucedemo.com/ | Browser: Chrome Version 151.0.7922.109 | OS: Windows 11",Verify Username case sensitivity,"1. navigate to login page
+2. Enter the Username with changed case senstivity
+3. Enter password
+4. Click Login",Error invalid username,Epic sadface: Username and password do not match any user in this service,,High
+19,,"URL: https://www.saucedemo.com/ | Browser: Chrome Version 151.0.7922.109 | OS: Windows 11",Verify space in Username,"1. navigate to login page
+2. Enter a Username with a space on the start or end of the name
+3. Enter password
+4. Click Login",Error invalid username,Epic sadface: Username and password do not match any user in this service,,High
+20,,"URL: https://www.saucedemo.com/ | Browser: Chrome Version 151.0.7922.109 | OS: Windows 11",Browse back button behavior after login,"1. navigate to login page
+2. Enter Username
+3. Enter Password
+4. Click Login
+5. Click Browse Back Button",Must log out and navigate to login page,Does not log out but navigate to login page,,Low
+21,,"URL: https://www.saucedemo.com/ | Browser: Chrome Version 151.0.7922.109 | OS: Windows 11",Browse back button behavior after logout,"1. navigate to login page
+2. Enter Username
+3. Enter Password
+4. Click Login
+5. Click Logout
+6. Click Browse Back Button",Must log out and navigate to login page,Does log out and navigate to login page,,Low
+22,,"URL: https://www.saucedemo.com/ | Browser: Chrome Version 151.0.7922.109 | OS: Windows 11",Forget password option,1. navigate to login page,There must be a forget password option,No forget password option,,Mid
+23,,"URL: https://www.saucedemo.com/ | Browser: Chrome Version 151.0.7922.109 | OS: Windows 11",Verify clicking on forget password,"1. navigate to login page
+2. Click on forget password",Must navigate to forget password page,No forget password option,,Mid
