@@ -1,0 +1,82 @@
+Test Case ID,Preconditions,Steps,Expected Result,Priority
+1,Login with both valid username & password,"1. navigate to login page
+2. Enter valid Username 
+3. Enter valid password
+4. Click Login",Successful Login,High
+2,Login with valid username & invalid password,"1. navigate to login page
+2. Enter valid Username
+3. Enter invalid Password
+4. Click Login",Error wrong password,High
+3,Login with invalid username & valid password,"1. navigate to login page
+2. Enter invalid Username
+3. Enter valid Password
+4. Click Login",Error invalid username,High
+4,Login with both invalid username & password,"1. navigate to login page
+2. Enter invalid Username
+3. Enter invalid Password
+4. Click Login",Error invalid username,High
+5,Login with both username & password fields empty,"1. navigate to login page
+2. Leave both the Username & Password field empty
+3. Click Login",Error username is required,High
+6,Login with only username field empty,"1. navigate to login page
+2. Leave the Username field empty
+3. Enter password
+4. Click Login",Error username is required,High
+7,Login with only password field empty,"1. navigate to login page
+2. Enter Username
+3. Leave the Password field empty
+4. Click Login",Error password is required,High
+8,Verify space in password field,"1. navigate to login page
+2. Enter a Username
+3. Enter password with a space on the start or end of the name
+4. Click Login",Shows hidden password in dots and error wrong password,High
+9,Verify password range limitation,"1. navigate to login page
+2. Enter Username
+3. Enter password less than 6 characters
+4. Click Login
+
+1. navigate to login page
+2. Enter Username
+3. Enter password more than 15 characters
+4. Click Login",Error Password range must be 8 -15 characters,Mid
+10,Verify password is hidden by default,"1. navigate to login page
+2. Enter password","Entered password must be hidden, either shows in dots/aesthetics",High
+11,Verify empty input field default placeholder,1. navigate to login page,Placeholder 'Username' & 'Password' is clearly visible,Mid
+12,Show/Hide password icon,1. navigate to login page,There mus be an icon to show/hide password,Mid
+13,Verify Tab key navigation,"1. navigate to login page
+2. Enter Username and enter Tab key
+3. Enter Password and enter Tab key","Cursor should move to password field, then show/hide password icon and then to login button",Mid
+14,Verify Enter key navigation,"1. navigate to login page
+2. Enter Username and click Enter key",Cursor should move to password field and then to login button,Mid
+15,Verify Enter key Login,"1. navigate to login page
+2. Enter Username and click Enter key
+3. Enter password and click Enter key",Successful Login,Mid
+16,Verify Login button click,"1. navigate to login page
+2. Enter Username
+3. Enter password
+4. Click login",Must show either error message or must login successfully,High
+17,Verify dismissing error message,"1. navigate to login page
+2. click Enter key
+3. click cross button on the error displayed",The error message must disappear on clicking the cross,Low
+18,Verify Username case sensitivity ,"1. navigate to login page
+2. Enter the Username with changed case senstivity
+3. Enter password
+4. Click Login",Error invalid username,High
+19,Verify space in Username,"1. navigate to login page
+2. Enter a Username with a space on the start or end of the name
+3. Enter password
+4. Click Login",Error invalid username,High
+20,Browse back button behavior after login,"1. navigate to login page
+2. Enter Username
+3. Enter Password
+4. Click Login
+5. Click Browse Back Button",Must log out and navigate to login page,Low
+21,Browse back button behavior after logout,"1. navigate to login page
+2. Enter Username
+3. Enter Password
+4. Click Login
+5. Click Logout
+6. Click Browse Back Button",Must log out and navigate to login page,Low
+22,Forget password option,1. navigate to login page,There must be a forget password option,Mid
+23,Verfy clicking on forget password,"1. navigate to login page
+2. Click on forget password",Must navigate to forget password page,Mid
