@@ -1,0 +1,11 @@
+No.,Name,Description,Selector,Confirmation
+1,Main Logo Image,"The main ""Automation Exercise"" logo image in the top-left header.",img,document.querySelector('img') successfully returned the <img> element in the console.
+2,"""Add to Cart"" Button","The blue ""Add to cart"" button overlay on the first product card.",.add-to-cart,"document.querySelector('.add-to-cart') successfully returned the <a class=""btn btn-default add-to-cart""> node."
+3,Slider Carousel Wrapper,The inner container for the homepage's main promotional image slider.,#slider-carousel,"document.querySelector('#slider-carousel') successfully returned the <div id=""slider-carousel"" class=""carousel slide""> node."
+4,Carousel Indicators,The navigation dots located at the bottom of the main image slider.,ol,"document.querySelector('ol') successfully returned the <ol class=""carousel-indicators""> node."
+5,Main Slider Section,The primary structural wrapper encompassing the entire homepage slider area.,#slider,"document.querySelector('#slider') successfully returned the <section id=""slider""> node."
+6,Subscribe Button,The arrow button used to submit an email address for the newsletter in the footer.,#subscribe,"document.querySelector('#subscribe') successfully returned the <button id=""subscribe"" class=""btn btn-default""> node."
+7,Footer Section,The main footer container block at the very bottom of the page.,#footer,"document.querySelector('#footer') successfully returned the <footer id=""footer""> node."
+8,Header Section,The main header container block at the very top of the page.,#header,"document.querySelector('#header') successfully returned the <header id=""header""> node."
+9,Hero Heading Text,"The large ""AutomationExercise"" text graphic inside the main slider banner.",h1,document.querySelector('h1') successfully returned the <h1> node.
+10,Top Navigation Menu,"The primary navigation menu bar containing links like Home, Products, Cart, etc.",ul,"document.querySelector('ul') successfully returned the <ul class=""nav navbar-nav""> node."
